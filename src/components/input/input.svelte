@@ -19,6 +19,6 @@
 </script>
 
 <div class="form">
-    <input type={typeInput} id={idInput} class="form_input" autocomplete="off" placeholder=" ">
-    <label for={idInput}  class="form_label">{labelInput}</label>
+    <input type={typeInput} id={idInput} class="form__input" autocomplete="off" placeholder=" ">
+    <label for={idInput}  class="form__label">{labelInput}</label>
 </div>

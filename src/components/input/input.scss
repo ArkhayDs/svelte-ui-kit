@@ -21,7 +21,7 @@ $radius: 0.5rem;
   height: 3rem;
   font-family: "Convergence", sans-serif;
 
-  &_input {
+  &__input {
     position: absolute;
     top: 0;
     left: 0;
@@ -46,7 +46,7 @@ $radius: 0.5rem;
     }
   }
 
-  &_label {
+  &__label {
     position: absolute;
     left: 1rem;
     top: 0.8rem;
@@ -59,8 +59,8 @@ $radius: 0.5rem;
 }
 
 
-.form_input:focus ~ .form_label,
-.form_input:not(:placeholder-shown).form_input:not(:focus) ~ .form_label {
+.form__input:focus ~ .form__label,
+.form__input:not(:placeholder-shown).form__input:not(:focus) ~ .form__label {
   top: -0.5rem;
   font-size: 0.8rem;
   left: 1.3rem;
