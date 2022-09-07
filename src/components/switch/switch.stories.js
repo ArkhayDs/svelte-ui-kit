@@ -3,8 +3,7 @@ import Switch from "./switch.svelte"
 export default {
     title: 'Components/Switch',
     component: Switch,
-    // color: {control: 'text'},
-    idInput: {control: 'number'},
+    colorInButton: {control: 'text'}
 };
 
 const Template = (args) => ({
@@ -16,7 +15,6 @@ const Template = (args) => ({
 });
 
 
-export const Check = Template.bind({});
-Check.args = {
-    
+export const SwitchButton = Template.bind({});
+SwitchButton.args = {
 };

@@ -23,13 +23,15 @@
 	}
 
     const dispatch = createEventDispatcher();
+    export let colorInButton = '';
+    
 </script>
 
 <body>
 	<div>
 		<label class="switch">
 			<input type="checkbox" use:checked />
-			<span class="slider round" />
+			<span class="slider round" style="background-color:{colorInButton}"/>
 		</label>
 	</div>
 </body>
