@@ -1,8 +1,12 @@
 /*   color variables */
-$clr-primary: #e7c576;
-$clr-secondary: #c56116;
-$clr-dark: #1f1b38;
-$clr-light: #d0ced7;
+$clr-primary: #E7C576;
+$clr-secondary: #C56116;
+$clr-positive: #A8FFA6;
+$clr-positive-text: #41C22C;
+$clr-negative: #FFA6A6;
+$clr-negative-text: #C22C2C;
+$clr-dark: #1F1B38;
+$clr-light: #F5F3FF;
 
 /*   border radius */
 $radius: 0.5rem;
@@ -17,11 +21,12 @@ $radius: 0.5rem;
 
 
 .container {
-    width: 25%;
+    width: 100%;
     background-color: $clr-light;
     border-radius: 15px;
     padding-bottom: 25px;
-    margin: 0px auto;
+    height: auto;
+    margin: 0 auto;
 
 
     .container_tab {
@@ -84,8 +89,6 @@ $radius: 0.5rem;
             padding: 40px 20px;
             font-size: 18px;
             color: #1f1b38;
-
-
         }
 
     }
@@ -93,12 +96,12 @@ $radius: 0.5rem;
     .form {
         display: flex;
         flex-direction: column;
-        margin: 0 auto;
         align-content: space-around;
         row-gap: 20px;
         border-radius: 5px;
-        height: 250px;
-
+        height: auto;
+        width: 50%;
+        margin: 0 auto;
 
         input {
             padding: 15px 20px;
@@ -110,7 +113,6 @@ $radius: 0.5rem;
         }
 
         &_submit {
-            float: right;
             width: 25%;
             padding: 5px 10px;
             border: none;
@@ -122,4 +124,8 @@ $radius: 0.5rem;
 
 
     }
+}
+
+@media screen and (max-width: 800px) {
+
 }
