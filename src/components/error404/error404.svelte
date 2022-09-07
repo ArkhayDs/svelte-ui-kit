@@ -63,10 +63,17 @@
         width: 100%;
         height: 100vh;
         background-size: cover;
+        overflow: hidden;
     }
 
     .contain-content {
+        width: 50%;
         text-align: center;
+    }
+
+    .contain-image {
+        width: 50%;
+        height: 100%;
     }
 
     .error {
@@ -81,7 +88,7 @@
     }
 
     button {
-        min-width: 40%;
+        min-width: 50%;
         height: 50px;
         font-weight: 700;
         transition-duration: 300ms;
@@ -97,9 +104,15 @@
         cursor: pointer;
     }
 
+    figure {
+        width: 100%;
+        height: 100%;
+    }
 
     img {
+        height: 100%;
         width: 100%;
+        object-fit: cover;
     }
 </style>
 
