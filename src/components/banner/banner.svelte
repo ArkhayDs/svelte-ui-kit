@@ -1,5 +1,5 @@
 <script>
-
+    import './banner.scss';
     import {createEventDispatcher} from "svelte";
 
     export let bannerText = "Hello World !";
@@ -27,82 +27,3 @@
         </svg>
     </span>
 </div>
-
-<style>
-    .bannerContainer {
-        display: flex;
-        position: sticky;
-        width: 100%;
-        min-height: 50px;
-        color: #F5F3FF;
-        background-color: #1F1B38;
-        border-radius: 10px;
-    }
-
-    .bannerText {
-        margin: auto 0 auto 5px;
-    }
-
-    .bannerTextCentered {
-        margin-left: auto;
-    }
-
-    .bannerIcon {
-        color: #1F1B38;
-        margin: auto 5px auto 25px;
-        min-width: 4%;
-    }
-
-    .bannerIcon svg {
-        background-color: #F5F3FF;
-        border-radius: 5px;
-        padding: 3px;
-    }
-
-    .bannerIconHidden {
-        display:none;
-    }
-
-    .bannerButton {
-        min-width: 15%;
-        font-weight: 700;
-        margin-left: auto;
-        margin-top: auto;
-        margin-bottom: auto;
-        border: none;
-        border-radius : 5px;
-        padding: 8px;
-    }
-
-    .bannerButton:hover {
-        background-color: #C56116;
-        color: #F5F3FF;
-        transition-duration: 0.3s;
-    }
-
-    .bannerButtonCentered {
-        min-width: 15%;
-        font-weight: 700;
-        margin: auto auto auto 15px;
-        border: none;
-        border-radius : 5px;
-        padding: 8px;
-    }
-
-    .bannerButtonCentered:hover {
-        background-color: #C56116;
-        color: #F5F3FF;
-        transition-duration: 0.3s;
-    }
-
-    .crossIcon {
-        color: #F5F3FF;
-        margin: auto 15px auto 5px;
-        min-width: 3%;
-    }
-
-    .crossIcon:hover {
-        color: #C56116;
-        transition-duration: 0.3s;
-    }
-</style>
