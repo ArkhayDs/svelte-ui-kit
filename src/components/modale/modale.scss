@@ -1,0 +1,123 @@
+/*   color variables */
+$clr-primary: #E7C576;
+$clr-secondary: #C56116;
+$clr-positive: #A8FFA6;
+$clr-positive-text: #41C22C;
+$clr-negative: #FFA6A6;
+$clr-negative-text: #C22C2C;
+$clr-dark: #1F1B38;
+$clr-light: #F5F3FF;
+
+.cta {
+    margin: 0 auto;
+    width: 50%;
+    height: 250px;
+    background-color: $clr-light;
+    color: black;
+    padding: 50px 60px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    display: none;
+    border-radius: 16px;
+
+    &.displayBlock {
+        display: block;
+    }
+
+    &_first_block {
+        &_title {
+            font-size: 32px;
+            font-weight: 200;
+            text-align: center;
+
+        }
+    }
+
+    &_second_block {
+        display: flex;
+        flex-direction: column;
+        row-gap: 50px;
+        margin-top: 25px;
+        &_content {
+
+            text-align: center;
+
+        }
+
+        &_button {
+            display: flex;
+            border: none;
+            cursor: pointer;
+            font-size: 22px;
+            padding: 15px 25px;
+            margin: 0 auto;
+            border-radius: 16px;
+
+        }
+    }
+
+}
+
+.modale {
+    display: none;
+    margin: 0 auto;
+    width: 55%;
+    height: auto;
+    background-color: $clr-light;
+    padding: 50px 60px;
+    border-radius: 15px;
+    .close {
+        cursor: pointer;
+        display: flex;
+        justify-content: end;
+        border: none;
+
+    }
+    &.displayBlock {
+        display: block;
+    }
+
+    &_first_block {
+        display: flex;
+        flex-direction: column;
+        row-gap: 25px;
+        padding: 20px 40px;
+        &_title {
+            text-align: center;
+
+        }
+
+        &_sous_title {
+            text-align: center;
+        }
+
+    }
+
+    &_seconde_block {
+        margin: 20px 150px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 25px;
+
+        input {
+            padding: 15px 20px;
+            border-radius: 15px;
+            font-size: 15px;
+        }
+        label {
+            font-size: 18px;
+        }
+
+        &_submit {
+            display: flex;
+            border: none;
+            cursor: pointer;
+            font-size: 22px;
+            padding: 15px 25px;
+            margin: 0 auto;
+            border-radius: 16px;
+        }
+
+    }
+}
