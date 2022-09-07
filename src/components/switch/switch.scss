@@ -38,7 +38,7 @@ $clr-light: #F5F3FF;
 	left: 0;
 	right: 0;
 	bottom: 0;
-	background-color: #C56116;
+	background-color: #ccc;
 	-webkit-transition: 0.4s;
 	transition: 0.4s;
 }
@@ -56,11 +56,11 @@ $clr-light: #F5F3FF;
 }
 
 input:checked + .slider {
-	background-color: #2196f3;
+	background-color: #C56116;
 }
 
 input:focus + .slider {
-	box-shadow: 0 0 1px #2196f3;
+	box-shadow: 0 0 1px #C56116;
 }
 
 input:checked + .slider:before {
