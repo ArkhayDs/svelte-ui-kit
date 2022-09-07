@@ -1,11 +1,17 @@
 <script>
     import './banner.scss';
     import {createEventDispatcher} from "svelte";
-
+    /**
+     * Label of bannerText (Banner's message...)
+     */
     export let bannerText = "Hello World !";
-
+    /**
+     * Label of buttonText
+     */
     export let buttonText = "Learn more";
-
+    /**
+     * Label of bannerCentered (false: not centered classic banner, true: centered banner...)
+     */
     export let bannerCentered = false;
 
     const dispatch = createEventDispatcher();
