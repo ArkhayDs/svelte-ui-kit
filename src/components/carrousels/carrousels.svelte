@@ -1,6 +1,5 @@
 <script>
     import './carrousel.scss';
-    import CarrouselsCard from './carrouselsCard.svelte'
     import {createEventDispatcher} from 'svelte';
 
     /**
@@ -16,16 +15,17 @@
     let idCarrouselLeft2 = ""
     let idCarrouselRight1 = 1
     let idCarrouselRight2 = 2
+    let classActive
 
 
     const CarrouselLeft = () => {
-
         if (idCarrouselActive > 0) {
             idCarrouselActive--
             idCarrouselLeft1 = idCarrouselActive - 1
             idCarrouselLeft2 = idCarrouselActive - 2
             idCarrouselRight1 = idCarrouselActive + 1
             idCarrouselRight2 = idCarrouselActive + 2
+            ifAtciveSwitch()
         }
     }
     const CarrouselRight = () => {
@@ -35,8 +35,10 @@
             idCarrouselLeft2 = idCarrouselActive - 2
             idCarrouselRight1 = idCarrouselActive + 1
             idCarrouselRight2 = idCarrouselActive + 2
+            ifAtciveSwitch()
         }
     }
+
 
     const ifAtcive = (i) => {
         switch (i) {
@@ -54,6 +56,45 @@
                 return "active-over"
         }
     }
+    const ifAtciveSwitch = () => {
+        TabelList.forEach((card, index) => {
+            let cardById = document.getElementById("carrousel__card-" + index);
+            let cardClass = cardById.classList
+            console.log(cardClass)
+
+            switch (index) {
+                case idCarrouselActive:
+                    cardClass.remove(cardClass[1])
+                    cardClass.add("active")
+                    break
+                case idCarrouselRight1:
+                    cardClass.remove(cardClass[1])
+                    cardClass.add("active-right1")
+                    break
+                case idCarrouselRight2:
+                    cardClass.remove(cardClass[1])
+                    cardClass.add("active-right2")
+                    break
+                case idCarrouselLeft1:
+                    cardClass.remove(cardClass[1])
+                    cardClass.add("active-left1")
+
+                    break
+                case idCarrouselLeft2:
+                    cardClass.remove(cardClass[1])
+                    cardClass.add("active-left2")
+                    break
+                default:
+                    cardClass.remove(cardClass[1])
+                    cardClass.add("active-over")
+                    break
+            }
+        })
+
+    }
+
+
+
 
 </script>
 
@@ -61,23 +102,15 @@
 <div class="carrousel__container">
     <div class="carrousel__container-flex">
         {#each TabelList as {image, title, description}, i}
-            {#if i === idCarrouselActive}
-                <CarrouselsCard id={i} classActive="active" image={image} title={title} description={description}/>
-            {:else if i === idCarrouselRight1}
-                <CarrouselsCard id={i} classActive="active-right1" image={image} title={title}
-                                description={description}/>
-            {:else if i === idCarrouselRight2}
-                <CarrouselsCard id={i} classActive="active-right2" image={image} title={title}
-                                description={description}/>
-            {:else if i === idCarrouselLeft1}
-                <CarrouselsCard id={i} classActive="active-left1" image={image} title={title}
-                                description={description}/>
-            {:else if i === idCarrouselLeft2}
-                <CarrouselsCard id={i} classActive="active-left2" image={image} title={title}
-                                description={description}/>
-            {:else}
-                <CarrouselsCard id={i} classActive="active-over" image={image} title={title} description={description}/>
-            {/if}
+            <div  id="carrousel__card-{i}" class="carrousel__card {ifAtcive(i)} ">
+                <div class="carrousel__card-image">
+                    <img src="{image}">
+                </div>
+                <div class="carrousel__card-text">
+                    <h3>{title}</h3>
+                    <p>{description}</p>
+                </div>
+            </div>
         {/each}
     </div>
     <div class="carrousel__direction">
