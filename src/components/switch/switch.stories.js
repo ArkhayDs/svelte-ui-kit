@@ -1,8 +1,10 @@
+import Switch from "./switch.svelte"
+
 export default {
     title: 'Components/Switch',
     component: Switch,
-    idInput: {control: 'text'},
-    typeInput: {control: 'checkbox'}
+    // color: {control: 'text'},
+    idInput: {control: 'number'},
 };
 
 const Template = (args) => ({
@@ -12,3 +14,9 @@ const Template = (args) => ({
         click: args.onClick,
     },
 });
+
+
+export const Check = Template.bind({});
+Check.args = {
+    
+};

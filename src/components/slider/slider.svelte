@@ -5,6 +5,8 @@
     /**
      * List slider infos of Bo
      */
+
+    
     export let TabelList = [{images: {image1: "", image2: "", image3: ""}, title: "", description: ""}]
 
     const dispatch = createEventDispatcher();

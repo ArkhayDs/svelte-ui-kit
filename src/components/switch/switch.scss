@@ -8,14 +8,14 @@ $clr-dark: #1F1B38;
 $clr-light: #F5F3FF;
 
 :global(body){
-  background-color: $clr-light;
-  color: $clr-dark;
-  transition: background-color 0.3s
+  background-color: white;
+  color: #1F1B38;
+  transition: background-color 0.3s;
 }
 
 :global(body.dark-mode){
-  background-color: $clr-dark;
-  color: $clr-light;
+  background-color: black;
+  color: white;
 }
 
 .switch {
@@ -38,7 +38,7 @@ $clr-light: #F5F3FF;
 	left: 0;
 	right: 0;
 	bottom: 0;
-	background-color: $clr-light;
+	background-color: #ccc;
 	-webkit-transition: 0.4s;
 	transition: 0.4s;
 }
@@ -50,17 +50,17 @@ $clr-light: #F5F3FF;
 	width: 26px;
 	left: 4px;
 	bottom: 4px;
-	background-color: $clr-light;
+	background-color: white;
 	-webkit-transition: 0.4s;
 	transition: 0.4s;
 }
 
 input:checked + .slider {
-	background-color: $clr-secondary;
+	background-color: #2196f3;
 }
 
 input:focus + .slider {
-	box-shadow: 0 0 1px $clr-secondary;
+	box-shadow: 0 0 1px #2196f3;
 }
 
 input:checked + .slider:before {

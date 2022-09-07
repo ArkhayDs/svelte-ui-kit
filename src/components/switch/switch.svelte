@@ -1,16 +1,6 @@
 <script>
     import './switch.scss'
-	import { createEventDispatcher } from "svelte";
-    /**
-     * id of input /!\The value must be unique/!\
-     */
-     export let idInput = '1';
-    /**
-     * Label of input (Password, Email, Username...)
-     */
-
-    export let typeInput = 'text';
-	
+	import { createEventDispatcher } from "svelte";	
 
 	function checked(node) {
 		function handleChange() {
@@ -37,8 +27,8 @@
 
 <body>
 	<div>
-		<label class="switch" id={idInput}>
-			<input type={typeInput} id={idInput} use:checked />
+		<label class="switch">
+			<input use:checked />
 			<span class="slider round" />
 		</label>
 	</div>
