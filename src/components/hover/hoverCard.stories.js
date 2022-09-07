@@ -13,8 +13,11 @@ const Template = (args) => ({
     },
 });
 
-export const username = Template.bind({});
-// username.args = {
-//     username: 'MOIIII',
-//     widthFigure: 100
-// }
+export const Username = Template.bind({});
+Username.args = {
+    image: 'https://www.smogon.com/forums/media/data/avatars/o/554/554045.jpg?1622568312',
+    name: 'Joy boy',
+    username: '@joyboy',
+    widthFigure: 70,
+    gap: 10,
+}

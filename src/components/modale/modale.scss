@@ -8,18 +8,26 @@ $clr-negative-text: #C22C2C;
 $clr-dark: #1F1B38;
 $clr-light: #F5F3FF;
 
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 .cta {
-    margin: 0 auto;
-    width: 50%;
-    height: 250px;
     background-color: $clr-light;
-    color: black;
-    padding: 50px 60px;
-    display: flex;
-    flex-direction: column;
-    row-gap: 20px;
-    display: none;
     border-radius: 16px;
+    color: black;
+    display: flex;
+    display: none;
+    flex-direction: column;
+    height: auto;
+    margin: 0 auto;
+    padding: 50px 60px;
+    row-gap: 20px;
+    width: 100%;
 
     &.displayBlock {
         display: block;
@@ -37,8 +45,9 @@ $clr-light: #F5F3FF;
     &_second_block {
         display: flex;
         flex-direction: column;
-        row-gap: 50px;
         margin-top: 25px;
+        row-gap: 50px;
+
         &_content {
 
             text-align: center;
@@ -46,13 +55,13 @@ $clr-light: #F5F3FF;
         }
 
         &_button {
-            display: flex;
             border: none;
-            cursor: pointer;
-            font-size: 22px;
-            padding: 15px 25px;
-            margin: 0 auto;
             border-radius: 16px;
+            cursor: pointer;
+            display: flex;
+            font-size: 22px;
+            margin: 0 auto;
+            padding: 15px 25px;
 
         }
     }
@@ -60,20 +69,21 @@ $clr-light: #F5F3FF;
 }
 
 .modale {
-    display: none;
-    margin: 0 auto;
-    width: 55%;
-    height: auto;
     background-color: $clr-light;
-    padding: 50px 60px;
     border-radius: 15px;
+    display: none;
+    height: auto;
+    margin: 0 auto;
+    padding: 50px 60px;
+    width: 100%;
+
     .close {
-        cursor: pointer;
-        display: flex;
-        justify-content: end;
         border: none;
+        cursor: pointer;
+        float: right;
 
     }
+
     &.displayBlock {
         display: block;
     }
@@ -81,8 +91,9 @@ $clr-light: #F5F3FF;
     &_first_block {
         display: flex;
         flex-direction: column;
-        row-gap: 25px;
         padding: 20px 40px;
+        row-gap: 25px;
+
         &_title {
             text-align: center;
 
@@ -95,28 +106,104 @@ $clr-light: #F5F3FF;
     }
 
     &_seconde_block {
-        margin: 20px 150px;
         display: flex;
         flex-direction: column;
+        margin: 20px 150px;
         row-gap: 25px;
 
         input {
-            padding: 15px 20px;
             border-radius: 15px;
             font-size: 15px;
+            padding: 15px 20px;
         }
+
         label {
             font-size: 18px;
         }
 
-        &_submit {
-            display: flex;
+        .form_input_submit {
             border: none;
-            cursor: pointer;
-            font-size: 22px;
-            padding: 15px 25px;
-            margin: 0 auto;
             border-radius: 16px;
+            cursor: pointer;
+            display: flex;
+            font-size: 22px;
+            margin: 0 auto;
+            padding: 15px 25px;
+        }
+
+
+    }
+}
+
+
+@media screen and (max-width: 693px) {
+    .cta {
+        background-color: $clr-light;
+        border-radius: 16px;
+        color: black;
+        display: flex;
+        display: none;
+        flex-direction: column;
+        height: auto;
+        margin: 0 auto;
+        padding: 40px 40px;
+        row-gap: 20px;
+        width: 100%;
+
+        &.displayBlock {
+            display: block;
+        }
+
+        &_first_block {
+            &_title {
+                font-size: 24px;
+                font-weight: 200;
+                text-align: center;
+
+            }
+        }
+
+        &_second_block {
+            display: flex;
+            flex-direction: column;
+            margin-top: 25px;
+            row-gap: 50px;
+
+            &_content {
+
+                text-align: center;
+
+            }
+
+            &_button {
+                border: none;
+                border-radius: 16px;
+                cursor: pointer;
+                display: flex;
+                font-size: 22px;
+                margin: 0 auto;
+                padding: 15px 25px;
+
+            }
+        }
+
+    }
+
+    .modale {
+        .close {
+
+        }
+
+        &_first_block {
+            &_title {
+                font-size: 24px;
+
+            }
+
+            &_sous_title {
+                font-size: 16px;
+            }
+
         }
 
     }

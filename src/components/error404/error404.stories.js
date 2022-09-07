@@ -13,8 +13,17 @@ const Template = (args) => ({
     },
 });
 
-export const username = Template.bind({});
-// username.args = {
-//     username: 'MOIIII',
-//     widthFigure: 100
-// }
+export const Image = Template.bind({});
+Image.args = {
+    image: 'https://www.floride-moto.com/wp-content/uploads/2021/08/floride-moto-accueil-00003.jpeg',
+    title: 'Page introuvable',
+    link: 'https://google.com',
+}
+
+Image.parameters = {
+    docs: {
+      description: {
+        story: 'Some story',
+      },
+    },
+  };

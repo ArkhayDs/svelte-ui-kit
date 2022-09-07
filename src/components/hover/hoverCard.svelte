@@ -1,10 +1,10 @@
 <script>
-    export let image = 'https://www.smogon.com/forums/media/data/avatars/o/554/554045.jpg?1622568312';
+    export let image = '';
     export let alt = '';
-    export let name = 'Joy boy';
-    export let username = '@joyboy';
-    export let widthFigure = 80;
-    export let gap = 10;
+    export let name = '';
+    export let username = '';
+    export let widthFigure = 90;
+    export let gap = 15;
 
     let topCard = widthFigure + gap;
 
@@ -36,7 +36,7 @@
                     { username }
                 </p>
                 <p class="content">
-                    ZEHAHAHAHAHAHAHAHAHAHHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAH
+                    SHISHISHISHISHISHISHISHISHISHISHISHISHISHISHISHISHISHISHISHISHISHISHISHISHISHISHISHISHISHISHISHISHISHISHISHI
                     <slot />
                 </p>
             </div>
@@ -48,8 +48,16 @@
 
 <style>
 
+    *,
+    *::before,
+    *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    }
+
+
     * {
-        box-sizing: border-box;
         font-family: "Convergence", sans-serif;
         font-size: 15px;
     }
