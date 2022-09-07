@@ -24,7 +24,7 @@
     <div class="container_faq">
         {#each faqList as {title, content}, i}
             <div class="container_faq_title" on:click={() => {clickTitle(i)}}>
-                <p>{title}</p>
+                <h1>{title}</h1>
             </div>
             <div class="container_faq_content {contentDisplayId === i ? 'schow' : ''}">
                 <p>{content}</p>
