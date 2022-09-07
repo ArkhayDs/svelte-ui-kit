@@ -7,13 +7,13 @@ $clr-negative-text: #C22C2C;
 $clr-dark: #1F1B38;
 $clr-light: #F5F3FF;
 
-:global(body){
+:global(div){
   background-color: white;
   color: #1F1B38;
   transition: background-color 0.3s;
 }
 
-:global(body.dark-mode){
+.dark-mode{
   background-color: black;
   color: white;
 }

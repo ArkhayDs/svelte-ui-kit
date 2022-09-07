@@ -28,7 +28,7 @@
 <body>
 	<div>
 		<label class="switch">
-			<input use:checked />
+			<input type="checkbox" use:checked />
 			<span class="slider round" />
 		</label>
 	</div>
