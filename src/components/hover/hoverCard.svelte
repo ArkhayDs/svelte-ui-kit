@@ -1,16 +1,19 @@
 <script>
-    export let image = 'https://via.placeholder.com/200x200?text=One Piece';
+    export let image = 'https://www.smogon.com/forums/media/data/avatars/o/554/554045.jpg?1622568312';
     export let alt = '';
-    export let name = 'John Michael';
-    export let username = '@johmichel';
+    export let name = 'Joy boy';
+    export let username = '@joyboy';
     export let widthFigure = 90;
-    // export let topCard = 10;
+    export let gap = 10;
+
+    let topCard = widthFigure + gap;
 
     let isHover = false;
 
     const toggleHover = () => {
         isHover = !isHover;
     }
+
 
 </script>
 
@@ -20,7 +23,7 @@
             <img src={ image } alt={ alt }>
         </figure>
 
-        <div class="card-area" class:is-hidden={ !isHover } style="top:{widthFigure}px">
+        <div class="card-area" class:is-hidden={ !isHover } style="top:{topCard}px">
             <div class="content-placeholder">
                 <figure style="width:{widthFigure}px">
                     <img src={ image } alt={ alt }>
@@ -52,6 +55,7 @@
 
     .container {
         width: 100vw;
+        height: 50vh;
         
     }
 
@@ -69,7 +73,7 @@
         padding: 20px;
         border-radius: 5px;
         box-shadow: 3px 3px 8px rgba(31, 27, 56, 0.33);
-        transition: .1s opacity ease-in;
+        transition: .1s opacity ease-in ;
         
     }
 
