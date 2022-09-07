@@ -4,22 +4,11 @@ $clr-secondary: #c56116;
 $clr-dark: #1f1b38;
 $clr-light: #f5f3ff;
 
-/*   border radius */
-$radius: 0.5rem;
-
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
 
 .container {
     background-color: #c9c9d3;
-    border-radius: 15px 15px 0px 0px;
-    margin: 0px auto;
-    width: 50%;
+    border-radius: 15px;
+    width: 100%;
 
     .container_faq_title {
         align-content: center;
@@ -38,17 +27,38 @@ $radius: 0.5rem;
     .container_faq_content {
         background-color: $clr-light;
         color: $clr-dark;
-        display: none;
-        font-size: 20px;
-        height: 150px;
+        font-size: 125%;
+        height: 0;
         justify-content: center;
+        min-height: 0;
+        padding: 0;
         margin: auto;
-        min-height: 30px;
-        padding: 20px 50px;
         text-align: center;
+        transition: .5s ease-in-out;
 
+        p {
+            opacity: 0;
+            transition:  .2s ease-in;
+            transition-delay: .2s;
+            font-size: 0;
+            &:hover {
+                cursor: default;
+                display: none;
+            }
+        }
         &.schow {
-            display: block;
+            height: 100%;
+            min-height: 30px;
+            padding: 20px 50px;
+            p {
+                opacity: 100%;
+                font-size: 100%;
+                &:hover {
+
+                    display: block;
+                }
+
+            }
         }
 
     }
