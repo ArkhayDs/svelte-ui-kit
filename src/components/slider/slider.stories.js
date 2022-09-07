@@ -13,8 +13,6 @@ const Template = (args) => ({
     },
 });
 
-
-
 export const Moto = Template.bind({});
 Moto.args = {
     TabelList: [
