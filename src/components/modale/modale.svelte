@@ -63,7 +63,7 @@
                     class="form_input_commentaires"
                     type={typeInput2}
             />
-            <input class="form_submit" type="submit" value="save"/>
+            <input class="form_input_submit" type="submit" value="save"/>
 
 
         </form>

@@ -1,8 +1,12 @@
 /*   color variables */
-$clr-primary: #e7c576;
-$clr-secondary: #c56116;
-$clr-dark: #1f1b38;
-$clr-light: #d0ced7;
+$clr-primary: #E7C576;
+$clr-secondary: #C56116;
+$clr-positive: #A8FFA6;
+$clr-positive-text: #41C22C;
+$clr-negative: #FFA6A6;
+$clr-negative-text: #C22C2C;
+$clr-dark: #1F1B38;
+$clr-light: #F5F3FF;
 
 /*   border radius */
 $radius: 0.5rem;
@@ -92,11 +96,12 @@ $radius: 0.5rem;
     .form {
         display: flex;
         flex-direction: column;
-        margin: 0 250px;
         align-content: space-around;
         row-gap: 20px;
         border-radius: 5px;
-        height: 250px;
+        height: auto;
+        width: 50%;
+        margin: 0 auto;
 
         input {
             padding: 15px 20px;
@@ -122,7 +127,5 @@ $radius: 0.5rem;
 }
 
 @media screen and (max-width: 800px) {
-    .container {
-        margin: 1em 2em;
-    }
+
 }

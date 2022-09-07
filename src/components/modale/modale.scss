@@ -17,17 +17,17 @@ $clr-light: #F5F3FF;
 }
 
 .cta {
-    margin: 0 auto;
-    width: 100%;
-    height: auto;
     background-color: $clr-light;
-    color: black;
-    padding: 50px 60px;
-    display: flex;
-    flex-direction: column;
-    row-gap: 20px;
-    display: none;
     border-radius: 16px;
+    color: black;
+    display: flex;
+    display: none;
+    flex-direction: column;
+    height: auto;
+    margin: 0 auto;
+    padding: 50px 60px;
+    row-gap: 20px;
+    width: 100%;
 
     &.displayBlock {
         display: block;
@@ -45,8 +45,9 @@ $clr-light: #F5F3FF;
     &_second_block {
         display: flex;
         flex-direction: column;
-        row-gap: 50px;
         margin-top: 25px;
+        row-gap: 50px;
+
         &_content {
 
             text-align: center;
@@ -54,13 +55,13 @@ $clr-light: #F5F3FF;
         }
 
         &_button {
-            display: flex;
             border: none;
-            cursor: pointer;
-            font-size: 22px;
-            padding: 15px 25px;
-            margin: 0 auto;
             border-radius: 16px;
+            cursor: pointer;
+            display: flex;
+            font-size: 22px;
+            margin: 0 auto;
+            padding: 15px 25px;
 
         }
     }
@@ -68,20 +69,21 @@ $clr-light: #F5F3FF;
 }
 
 .modale {
-    display: none;
-    margin: 0 auto;
-    width: 100%;
-    height: auto;
     background-color: $clr-light;
-    padding: 50px 60px;
     border-radius: 15px;
+    display: none;
+    height: auto;
+    margin: 0 auto;
+    padding: 50px 60px;
+    width: 100%;
+
     .close {
-        cursor: pointer;
-        display: flex;
-        justify-content: end;
         border: none;
+        cursor: pointer;
+        float: right;
 
     }
+
     &.displayBlock {
         display: block;
     }
@@ -89,8 +91,9 @@ $clr-light: #F5F3FF;
     &_first_block {
         display: flex;
         flex-direction: column;
-        row-gap: 25px;
         padding: 20px 40px;
+        row-gap: 25px;
+
         &_title {
             text-align: center;
 
@@ -103,27 +106,29 @@ $clr-light: #F5F3FF;
     }
 
     &_seconde_block {
-        margin: 20px 150px;
         display: flex;
         flex-direction: column;
+        margin: 20px 150px;
         row-gap: 25px;
 
         input {
-            padding: 15px 20px;
             border-radius: 15px;
             font-size: 15px;
+            padding: 15px 20px;
         }
+
         label {
             font-size: 18px;
         }
 
-        &_submit {
+        .form_input_submit {
             border: none;
-            cursor: pointer;
-            font-size: 22px;
-            padding: 15px 46px;
-            margin: 0 auto;
             border-radius: 16px;
+            cursor: pointer;
+            display: flex;
+            font-size: 22px;
+            margin: 0 auto;
+            padding: 15px 25px;
         }
 
 
@@ -133,17 +138,17 @@ $clr-light: #F5F3FF;
 
 @media screen and (max-width: 693px) {
     .cta {
-        margin: 0 auto;
-        width: 100%;
-        height: auto;
         background-color: $clr-light;
-        color: black;
-        padding: 40px 40px;
-        display: flex;
-        flex-direction: column;
-        row-gap: 20px;
-        display: none;
         border-radius: 16px;
+        color: black;
+        display: flex;
+        display: none;
+        flex-direction: column;
+        height: auto;
+        margin: 0 auto;
+        padding: 40px 40px;
+        row-gap: 20px;
+        width: 100%;
 
         &.displayBlock {
             display: block;
@@ -161,8 +166,9 @@ $clr-light: #F5F3FF;
         &_second_block {
             display: flex;
             flex-direction: column;
-            row-gap: 50px;
             margin-top: 25px;
+            row-gap: 50px;
+
             &_content {
 
                 text-align: center;
@@ -170,13 +176,13 @@ $clr-light: #F5F3FF;
             }
 
             &_button {
-                display: flex;
                 border: none;
-                cursor: pointer;
-                font-size: 22px;
-                padding: 15px 25px;
-                margin: 0 auto;
                 border-radius: 16px;
+                cursor: pointer;
+                display: flex;
+                font-size: 22px;
+                margin: 0 auto;
+                padding: 15px 25px;
 
             }
         }
@@ -184,66 +190,21 @@ $clr-light: #F5F3FF;
     }
 
     .modale {
-        display: none;
-        margin: 0 auto;
-        width: 100%;
-        height: auto;
-        background-color: $clr-light;
-        padding: 50px 60px;
-        border-radius: 15px;
         .close {
-            cursor: pointer;
-            display: flex;
-            justify-content: end;
-            border: none;
 
-        }
-        &.displayBlock {
-            display: block;
         }
 
         &_first_block {
-            display: flex;
-            flex-direction: column;
-            row-gap: 25px;
-            padding: 20px 40px;
             &_title {
-                text-align: center;
                 font-size: 24px;
 
             }
 
             &_sous_title {
-                text-align: center;font-size: 16px;
+                font-size: 16px;
             }
 
         }
 
-        &_seconde_block {
-            margin: 20px 150px;
-            display: flex;
-            flex-direction: column;
-            row-gap: 25px;
-
-            input {
-                padding: 15px 20px;
-                border-radius: 15px;
-                font-size: 15px;
-            }
-            label {
-                font-size: 18px;
-            }
-
-            &_submit {
-                border: none;
-                cursor: pointer;
-                font-size: 22px;
-                padding: 15px 46px;
-                margin: 0 auto;
-                border-radius: 16px;
-            }
-
-
-        }
     }
 }
