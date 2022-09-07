@@ -81,7 +81,11 @@
         {/each}
     </div>
     <div class="carrousel__direction">
-        <img on:click={CarrouselLeft} class="carrousel__direction-arrow {idCarrouselActive > 0 ? '':'carrousel__direction-arrow-no' }" src="./src/assets/CarrouselLeft.svg">
-        <img on:click={CarrouselRight} class="carrousel__direction-arrow {idCarrouselActive < TabelList.length - 1 ? '' : 'carrousel__direction-arrow-no'}" src="./src/assets/CarrouselRight.svg">
+        <img on:click={CarrouselLeft}
+             class="carrousel__direction-arrow {idCarrouselActive > 0 ? '':'carrousel__direction-arrow-no' }"
+             src="./src/assets/CarrouselLeft.svg">
+        <img on:click={CarrouselRight}
+             class="carrousel__direction-arrow {idCarrouselActive < TabelList.length - 1 ? '' : 'carrousel__direction-arrow-no'}"
+             src="./src/assets/CarrouselRight.svg">
     </div>
 </div>
