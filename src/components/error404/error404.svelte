@@ -6,8 +6,9 @@
     export let link = '';
     export let is404visible = true;
     export let isImageVisible = true;
+
     let imageBG = image;
-    
+
     if (((align == 'right') || (align == 'left')) || !isImageVisible) {
         imageBG = ''
     }
@@ -28,11 +29,11 @@
         </a>
     </div>
     {#if (isImageVisible && (align === 'right')) || (isImageVisible && (align === 'left'))}
-        <div class="contain-image">
-            <figure>
-                <img src={image} alt={alt}>
-            </figure>
-        </div>
+    <div class="contain-image">
+        <figure>
+            <img src={image} alt={alt}>
+        </figure>
+    </div>
     {/if}
 </div>
 
@@ -113,6 +114,16 @@
         height: 100%;
         width: 100%;
         object-fit: cover;
+    }
+
+    @media (max-width: 768px) {
+        .contain-image {
+            display: none;
+        }
+
+        .contain-content {
+            width: 100%;
+        }
     }
 </style>
 
