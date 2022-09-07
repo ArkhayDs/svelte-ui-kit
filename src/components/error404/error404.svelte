@@ -9,7 +9,7 @@
     
 </script>
 
-<div class="{ align == 'right' ? 'align-right' : '' } container">
+<div class="{ align == 'right' ? 'align-right' : '' } { align == 'left' ? 'align-left' : '' } container">
 
     {#if isImageVisible && align == 'right' || 'left'}
     <div class="contain-content">
@@ -39,10 +39,6 @@
 
 <style>
 
-    .is-hidden {
-        opacity: 0;
-    }
-
     .align-right, .align-left {
         display: flex;
     }
@@ -55,10 +51,6 @@
         width: 100vw;
         height: 100vh;
         
-    }
-
-    figure {
-        overflow: hidden;
     }
 
     img {

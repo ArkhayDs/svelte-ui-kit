@@ -3,7 +3,7 @@
     export let alt = '';
     export let name = 'Joy boy';
     export let username = '@joyboy';
-    export let widthFigure = 90;
+    export let widthFigure = 80;
     export let gap = 10;
 
     let topCard = widthFigure + gap;
@@ -20,7 +20,7 @@
 <div class="container">
     <div class="contain-hover">
         <figure class="profil-pic" on:mouseenter={ toggleHover } on:mouseleave={ toggleHover } style="width:{widthFigure}px">
-            <img src={ image } alt={ alt }>
+            <img class:outline-yellow={ isHover } src={ image } alt={ alt }>
         </figure>
 
         <div class="card-area" class:is-hidden={ !isHover } style="top:{topCard}px">
@@ -35,9 +35,8 @@
                 <p class="username">
                     { username }
                 </p>
-
                 <p class="content">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus ipsum ratione animi voluptatibus id eum consectetur optio quidem fugit, modi, ad, necessitatibus maxime voluptates tenetur accusantium sint voluptatum deleniti quibusdam!
+                    ZEHAHAHAHAHAHAHAHAHAHHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAH
                     <slot />
                 </p>
             </div>
@@ -49,14 +48,20 @@
 
 <style>
 
+    * {
+        box-sizing: border-box;
+        font-family: "Convergence", sans-serif;
+        font-size: 15px;
+    }
+
     .is-hidden {
         opacity: 0;
     }
 
     .container {
-        width: 100vw;
+        width: 100%;
         height: 50vh;
-        
+        background-color: #F5F3FF;
     }
 
     .contain-hover {
@@ -71,6 +76,7 @@
         position: absolute;
         width: 300px;
         padding: 20px;
+        background-color: white;
         border-radius: 5px;
         box-shadow: 3px 3px 8px rgba(31, 27, 56, 0.33);
         transition: .1s opacity ease-in ;
@@ -78,21 +84,26 @@
     }
 
     p {
-        padding-top: 10px;
+        padding-top: 5px;
+    }
+
+    .content {
+        padding-top: 15px;
+        overflow-wrap: break-word;
     }
 
     .username {
-        padding-top: 5px;
         color: grey;
-    }
-
-    figure {
-        overflow: hidden;
     }
 
     img {
         width: 100%;
         border-radius: 50%;
     }
+
+    .outline-yellow {
+        outline: solid 2px #E7C576;
+    }
+
 </style>
 
