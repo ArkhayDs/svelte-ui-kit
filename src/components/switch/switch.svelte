@@ -5,10 +5,20 @@
 	function checked(node) {
 		function handleChange() {
 			if (node.checked) {
-				node.parentNode.parentNode.classList.add("dark-mode");
+				if(blueDarkMode == false && lightBlueDarkMode == false && darkMode == true){
+					node.parentNode.parentNode.classList.add("dark-mode");
+				}
+				else if(blueDarkMode == true && lightBlueDarkMode == false && darkMode == false){
+					node.parentNode.parentNode.classList.add("blue-dark-mode");
+				}
+				else if(blueDarkMode == false && lightBlueDarkMode == true && darkMode == false){
+					node.parentNode.parentNode.classList.add("light-blue-dark-mode");
+				}
 				console.log("Checked");
 			} else {
 				node.parentNode.parentNode.classList.remove("dark-mode");
+				node.parentNode.parentNode.classList.add("blue-dark-mode");
+				node.parentNode.parentNode.classList.add("light-blue-dark-mode");
 				console.log("Not checked");
 			}
 		}
@@ -24,7 +34,9 @@
 
     const dispatch = createEventDispatcher();
     export let colorInButton = '';
-    
+    export let blueDarkMode = false;
+	export let lightBlueDarkMode = false;
+	export let darkMode = false;
 </script>
 
 <body>
