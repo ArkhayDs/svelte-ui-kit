@@ -1,3 +1,4 @@
+<svelte:options tag="switch-multiple"/>
 <script>
     import './switch.scss'
 	import { createEventDispatcher } from "svelte";	
