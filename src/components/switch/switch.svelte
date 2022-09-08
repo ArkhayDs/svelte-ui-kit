@@ -1,3 +1,4 @@
+<svelte:options tag="switch-multiple"/>
 <script>
     import './switch.scss'
 	import { createEventDispatcher } from "svelte";	
@@ -33,7 +34,7 @@
 	}
 
     const dispatch = createEventDispatcher();
-    export let colorInButton = '';
+    
     export let blueDarkMode = false;
 	export let lightBlueDarkMode = false;
 	export let darkMode = false;
@@ -43,7 +44,7 @@
 	<div>
 		<label class="switch">
 			<input type="checkbox" use:checked />
-			<span class="slider round" style="background-color:{colorInButton}"/>
+			<span class="slider round"/>
 		</label>
 	</div>
 </body>
