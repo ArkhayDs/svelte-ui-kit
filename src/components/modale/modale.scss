@@ -8,13 +8,6 @@ $clr-negative-text: #C22C2C;
 $clr-dark: #1F1B38;
 $clr-light: #F5F3FF;
 
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
 
 .cta {
     background-color: $clr-light;

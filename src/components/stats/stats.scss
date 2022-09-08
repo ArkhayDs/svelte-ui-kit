@@ -10,7 +10,6 @@ $clr-light: #F5F3FF;
 
 
 .stats__cels-container {
-  width: 100%;
   font-family: "Convergence", sans-serif;
   background-color: $clr-light;
   padding: 24px 30px 10px 30px;
@@ -32,6 +31,7 @@ $clr-light: #F5F3FF;
       color: $clr-primary;
       font-size: 60px;
       font-weight: bold;
+      margin: 0;
 
     }
 

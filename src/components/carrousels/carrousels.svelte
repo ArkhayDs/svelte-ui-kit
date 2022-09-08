@@ -56,6 +56,7 @@
                 return "active-over"
         }
     }
+
     const ifAtciveSwitch = () => {
         TabelList.forEach((card, index) => {
             let cardById = document.getElementById("carrousel__card-" + index);

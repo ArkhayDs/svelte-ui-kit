@@ -1,0 +1,62 @@
+* {
+  font-family: "Convergence", sans-serif;
+  font-size: 15px;
+  margin: 0;
+  padding: 0;
+}
+
+.is-hidden {
+  opacity: 0;
+}
+
+.hoverCard__container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+
+
+  .contain-hover {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+
+    .card-area {
+      margin: 0;
+
+      position: absolute;
+      width: 300px;
+      padding: 20px;
+      background-color: white;
+      border-radius: 5px;
+      box-shadow: 3px 3px 8px rgba(31, 27, 56, 0.33);
+      transition: .1s opacity ease-in;
+
+    }
+
+    p {
+      padding-top: 5px;
+    }
+
+    .content {
+      padding-top: 15px;
+      overflow-wrap: break-word;
+    }
+
+    .username {
+      color: grey;
+    }
+
+    img {
+      width: 100%;
+      border-radius: 50%;
+    }
+
+    .outline-yellow {
+      outline: solid 2px #E7C576;
+    }
+  }
+
+
+}
