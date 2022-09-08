@@ -7,12 +7,6 @@ $clr-negative-text: #C22C2C;
 $clr-dark: #1F1B38;
 $clr-light: #F5F3FF;
 
-:global(div){
-  background-color: white;
-  color: #1F1B38;
-  transition: background-color 0.3s;
-}
-
 .dark-mode{
   background-color: black;
   color: white;
@@ -33,12 +27,11 @@ $clr-light: #F5F3FF;
 	display: inline-block;
 	width: 60px;
 	height: 34px;
-}
-
-.switch input {
-	opacity: 0;
-	width: 0;
-	height: 0;
+	& input{
+		opacity: 0;
+		width: 0;
+		height: 0;
+	}
 }
 
 .slider {
@@ -51,19 +44,19 @@ $clr-light: #F5F3FF;
 	background-color: #ccc;
 	-webkit-transition: 0.4s;
 	transition: 0.4s;
+	&:before{
+		position: absolute;
+		content: "";
+		height: 26px;
+		width: 26px;
+		left: 4px;
+		bottom: 4px;
+		background-color: white;
+		-webkit-transition: 0.4s;
+		transition: 0.4s;
+	}
 }
 
-.slider:before {
-	position: absolute;
-	content: "";
-	height: 26px;
-	width: 26px;
-	left: 4px;
-	bottom: 4px;
-	background-color: white;
-	-webkit-transition: 0.4s;
-	transition: 0.4s;
-}
 
 input:checked + .slider {
 	background-color: #C56116;
@@ -81,8 +74,7 @@ input:checked + .slider:before {
 
 .slider.round {
 	border-radius: 34px;
-}
-
-.slider.round:before {
-	border-radius: 50%;
+	&:before{
+		border-radius: 50%;
+	}
 }
