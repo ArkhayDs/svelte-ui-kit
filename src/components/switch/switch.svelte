@@ -17,8 +17,8 @@
 				console.log("Checked");
 			} else {
 				node.parentNode.parentNode.classList.remove("dark-mode");
-				node.parentNode.parentNode.classList.add("blue-dark-mode");
-				node.parentNode.parentNode.classList.add("light-blue-dark-mode");
+				node.parentNode.parentNode.classList.remove("blue-dark-mode");
+				node.parentNode.parentNode.classList.remove("light-blue-dark-mode");
 				console.log("Not checked");
 			}
 		}
